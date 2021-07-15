@@ -1,0 +1,284 @@
+Mar-27 23:07:28.306 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/ampliseq -r 1.2.0 -profile test,docker
+Mar-27 23:07:28.417 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Mar-27 23:07:29.334 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/ampliseq.git
+Mar-27 23:07:29.353 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/ampliseq.git
+Mar-27 23:07:29.631 [main] INFO  nextflow.cli.CmdRun - Launching `nf-core/ampliseq` [marvelous_mirzakhani] - revision: 1e76f1c0c6 [1.2.0]
+Mar-27 23:07:30.406 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq/nextflow.config
+Mar-27 23:07:30.407 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq/nextflow.config
+Mar-27 23:07:30.414 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Mar-27 23:07:31.221 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, genotoul, test_doubleprimers, uppmax, abims, test_pacbio_its, imperial_mb, oist, mpcdf, test_manifest, podman, czbiohub_aws, jax, ccga_med, test, google, kraken, seg_globe, shh, pasteur, test_full, eddie, bi, bigpurple, docker, gis, utd_ganymede, conda, test_multi, singularity, icr_davros, munin, prince, hebbe, cfc, uzh, debug, genouest, cbe, ebc, ccga_dx, crick, phoenix, awsbatch, uct_hpc, imperial, binac]
+Mar-27 23:07:31.276 [main] DEBUG nextflow.Session - Session uuid: 4e850a6e-494e-426d-9d34-cfab987182d9
+Mar-27 23:07:31.277 [main] DEBUG nextflow.Session - Run name: marvelous_mirzakhani
+Mar-27 23:07:31.277 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-27 23:07:31.539 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC (08:14 MDT)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.5 on Java HotSpot(TM) 64-Bit Server VM 14.0.2+12-46
+  Encoding: UTF-8 (UTF-8)
+  Process: 98175@Nirvaans-MacBook-Pro.local [127.0.0.1]
+  CPUs: 8 - Mem: 8 GB (31.4 MB) - Swap: 7 GB (1.2 GB)
+Mar-27 23:07:31.552 [main] DEBUG nextflow.Session - Work-dir: /Users/nirvaanreddy/Desktop/CURVE/work [Mac OS X]
+Mar-27 23:07:31.611 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Mar-27 23:07:31.613 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-27 23:07:31.835 [main] DEBUG nextflow.Session - Session start invoked
+Mar-27 23:07:31.840 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/nirvaanreddy/Desktop/CURVE/results/pipeline_info/execution_trace.txt
+Mar-27 23:07:35.692 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-27 23:07:35.706 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: RelativeAbundanceReducedTaxa, metadata_category_pairwise, qiime_importdemux_visualize, diversity_core, output_documentation, beta_diversity, prepare_ancom, dada_trunc_parameter, filter_taxa, beta_diversity_ordination, qiime_import_multi, trimming_multi, dada_trunc_se, dada_multi, barplot, fastqc_multi, classifier, trimming, qiime_import, get_software_versions, multiqc, qiime_demux_visualize, classifier_extract_seq, alpha_diversity, metadata_category_all, tree, combinetable, report_filter_stats, alpha_rarefaction, dada_merge, ancom_tax, dada_pacBio, dada_single, RelativeAbundanceASV, qiime_import_pacbio, fastqc, classifier_train, ancom_asv, export_filtered_dada_output
+Mar-27 23:07:35.924 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/ampliseq v1.2.0[0m
+-[2m--------------------------------------------------[0m-
+
+Mar-27 23:07:35.930 [main] INFO  nextflow.Nextflow - Pipeline Name     : nf-core/ampliseq
+Pipeline Release  : 1.2.0
+Run Name          : marvelous_mirzakhani
+Input             : data/*_R{1,2}_001.fastq.gz
+Max Resources     : 6 GB memory, 2 cpus, 2d time per job
+Container         : docker - nfcore/ampliseq:1.2.0
+Output dir        : ./results
+Launch dir        : /Users/nirvaanreddy/Desktop/CURVE
+Working dir       : /Users/nirvaanreddy/Desktop/CURVE/work
+Script dir        : /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq
+User              : nirvaanreddy
+Config Profile    : test,docker
+Config Profile Description: Minimal test dataset to check pipeline function
+Config Files      : /Users/nirvaanreddy/.nextflow/assets/nf-core/ampliseq/nextflow.config
+Mar-27 23:07:35.930 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+Mar-27 23:07:35.931 [main] INFO  nextflow.Nextflow - 
+######## WARNING: No DADA2 cutoffs were specified, therefore reads will be truncated where median quality drops below 25 but at least a fraction of 0.75 of the reads will be retained.
+The chosen cutoffs do not account for required overlap for merging, therefore DADA2 might have poor merging efficiency or even fail.
+
+Mar-27 23:07:36.007 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:get_software_versions` matches process get_software_versions
+Mar-27 23:07:36.011 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.011 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.015 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-27 23:07:36.030 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-27 23:07:36.139 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.140 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.162 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.162 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.210 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.210 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.225 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.226 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.243 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.243 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.250 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.250 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.260 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:dada_single` matches process dada_single
+Mar-27 23:07:36.260 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.260 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.267 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:classifier` matches process classifier
+Mar-27 23:07:36.268 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.268 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.278 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.278 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.292 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.292 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.296 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.300 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.301 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.304 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.304 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.311 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.311 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.313 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:36.316 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:tree` matches process tree
+Mar-27 23:07:36.317 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.317 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.318 [Task submitter] INFO  nextflow.Session - [32/70df10] Submitted process > get_software_versions
+Mar-27 23:07:36.329 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.353 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.358 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.359 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.362 [Actor Thread 15] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.017 s; total time: 0.018 s
+Mar-27 23:07:36.369 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.369 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.372 [Actor Thread 15] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/1dc932a635838594eeb9e37d4034f0b9.collect-file
+Mar-27 23:07:36.375 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.375 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.379 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.379 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.387 [Actor Thread 15] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/nxf-892488917754899203
+Mar-27 23:07:36.400 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.400 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.404 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.404 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.407 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.407 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.412 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.412 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.422 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ancom_tax` matches process ancom_tax
+Mar-27 23:07:36.422 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.422 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.426 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ancom_asv` matches process ancom_asv
+Mar-27 23:07:36.426 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.426 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.429 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:07:36.429 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:07:36.434 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-27 23:07:36.434 [main] DEBUG nextflow.Session - Session await
+Mar-27 23:07:37.162 [Actor Thread 21] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=24; maxQueueSize=72; keepAlive=1m
+Mar-27 23:07:37.196 [FileTransfer-thread-1] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/Metadata.tsv at /Users/nirvaanreddy/Desktop/CURVE/work/stage/55/10c7c994eafbdc2f7ea85b7eadcbef/Metadata.tsv
+Mar-27 23:07:37.773 [FileTransfer-thread-2] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/2a_S115_L001_R1_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/6b/20613de18b48f9d287fc759ebea2ae/2a_S115_L001_R1_001.fastq.gz
+Mar-27 23:07:38.108 [FileTransfer-thread-3] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1_S103_L001_R1_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/e1/81e5cc4a6fea596940a3a2e0ac0210/1_S103_L001_R1_001.fastq.gz
+Mar-27 23:07:38.793 [FileTransfer-thread-4] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1_S103_L001_R2_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/d3/ebee476b6400125e55dc848e2dd892/1_S103_L001_R2_001.fastq.gz
+Mar-27 23:07:39.118 [FileTransfer-thread-5] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1a_S103_L001_R1_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/92/68810c137005ddb07f55eabeff69d4/1a_S103_L001_R1_001.fastq.gz
+Mar-27 23:07:39.467 [FileTransfer-thread-6] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1a_S103_L001_R2_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/c5/55d15a7ee5ba062b89161371353cc6/1a_S103_L001_R2_001.fastq.gz
+Mar-27 23:07:40.140 [FileTransfer-thread-7] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/2_S115_L001_R1_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/26/a2fd8f3cd80a47f95421821614ae41/2_S115_L001_R1_001.fastq.gz
+Mar-27 23:07:40.481 [FileTransfer-thread-8] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/2_S115_L001_R2_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/65/4f7d951735088c93fe343137a03465/2_S115_L001_R2_001.fastq.gz
+Mar-27 23:07:41.183 [FileTransfer-thread-9] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/1a_S103_L001_R1_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/92/68810c137005ddb07f55eabeff69d4/1a_S103_L001_R1_001.fastq.gz
+Mar-27 23:07:41.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: get_software_versions; status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/32/70df10d82e919ffef31082bd487037]
+Mar-27 23:07:41.442 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:41.442 [Task submitter] INFO  nextflow.Session - [e3/affedb] Submitted process > output_documentation
+Mar-27 23:07:41.513 [FileTransfer-thread-11] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/2a_S115_L001_R2_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/b1/933a0b745886117dde6584ab53d098/2a_S115_L001_R2_001.fastq.gz
+Mar-27 23:07:42.350 [FileTransfer-thread-12] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/2_S115_L001_R2_001.fastq.gz at /Users/nirvaanreddy/Desktop/CURVE/work/stage/65/4f7d951735088c93fe343137a03465/2_S115_L001_R2_001.fastq.gz
+Mar-27 23:07:43.111 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: output_documentation; status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/e3/affedbc181e47e4eb2c4a077d5b6a0]
+Mar-27 23:07:43.116 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:43.117 [Task submitter] INFO  nextflow.Session - [5b/06550a] Submitted process > metadata_category_pairwise (1)
+Mar-27 23:07:44.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: metadata_category_pairwise (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/5b/06550a0476a0f711e9b4217c008335]
+Mar-27 23:07:44.704 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:44.704 [Task submitter] INFO  nextflow.Session - [0c/77986f] Submitted process > metadata_category_all (1)
+Mar-27 23:07:46.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: metadata_category_all (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/0c/77986ff21be97ee2ebb22c5c6b2e0b]
+Mar-27 23:07:46.651 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:46.652 [Task submitter] INFO  nextflow.Session - [18/e71ae6] Submitted process > trimming (1)
+Mar-27 23:07:48.300 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: trimming (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/18/e71ae688fc763cf12408017d26daa6]
+Mar-27 23:07:48.309 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:48.310 [Task submitter] INFO  nextflow.Session - [4a/aa2352] Submitted process > trimming (2)
+Mar-27 23:07:49.906 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: trimming (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/4a/aa2352d1b0948045aee96a9e7ac29b]
+Mar-27 23:07:49.911 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:49.911 [Task submitter] INFO  nextflow.Session - [75/471bf3] Submitted process > fastqc (2a)
+Mar-27 23:07:59.235 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: fastqc (2a); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/75/471bf36b891595125e8da8aea40f43]
+Mar-27 23:07:59.242 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:07:59.243 [Task submitter] INFO  nextflow.Session - [22/5bbac2] Submitted process > fastqc (1a)
+Mar-27 23:08:09.614 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fastqc (1a); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/22/5bbac247577595b3247a9dedc0738f]
+Mar-27 23:08:09.647 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:09.649 [Task submitter] INFO  nextflow.Session - [1f/85a6d6] Submitted process > fastqc (1)
+Mar-27 23:08:22.570 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: fastqc (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/1f/85a6d605137dc899186fc4852b14ab]
+Mar-27 23:08:22.594 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:22.594 [Task submitter] INFO  nextflow.Session - [9c/d6b30d] Submitted process > fastqc (2)
+Mar-27 23:08:33.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: fastqc (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/9c/d6b30dff64fb7b1f60fa8840d79d9e]
+Mar-27 23:08:33.089 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:33.090 [Task submitter] INFO  nextflow.Session - [85/f7bc0b] Submitted process > trimming (1a)
+Mar-27 23:08:34.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: trimming (1a); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/85/f7bc0b9c6ed6583e9a3b7ed4810d2b]
+Mar-27 23:08:34.624 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:34.624 [Task submitter] INFO  nextflow.Session - [16/25ac53] Submitted process > trimming (2a)
+Mar-27 23:08:36.026 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: trimming (2a); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/16/25ac53e515616c8500fcd22711e840]
+Mar-27 23:08:36.063 [Actor Thread 24] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 4; slices: 1; internal sort time: 0.025 s; external sort time: 0.002 s; total time: 0.027 s
+Mar-27 23:08:36.066 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/d260c928cb99a6bcb338df7e20320d29.collect-file
+Mar-27 23:08:36.072 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/nxf-7801690672044026039
+Mar-27 23:08:36.101 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:36.101 [Task submitter] INFO  nextflow.Session - [38/59cdfb] Submitted process > multiqc (1)
+Mar-27 23:08:55.553 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: multiqc (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/38/59cdfb7aa5580a60611f537d959c3b]
+Mar-27 23:08:55.567 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:08:55.567 [Task submitter] INFO  nextflow.Session - [58/2e7fcc] Submitted process > qiime_import (1)
+Mar-27 23:09:03.272 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: qiime_import (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/58/2e7fcc140b19683cdeb31fa9bd8ef4]
+Mar-27 23:09:03.287 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:09:03.288 [Task submitter] INFO  nextflow.Session - [00/02079f] Submitted process > qiime_demux_visualize (demux)
+Mar-27 23:09:16.171 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: qiime_demux_visualize (demux); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/00/02079f69661eaa3855105fdf24b5f7]
+Mar-27 23:09:16.278 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:09:16.278 [Task submitter] INFO  nextflow.Session - [3d/7c06a9] Submitted process > dada_trunc_parameter (1)
+Mar-27 23:09:18.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: dada_trunc_parameter (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/3d/7c06a99e6f3c3fd33f5f1786011085]
+Mar-27 23:09:18.856 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:09:18.856 [Task submitter] INFO  nextflow.Session - [59/c9d0f3] Submitted process > dada_single (230,229)
+Mar-27 23:09:54.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: dada_single (230,229); status: COMPLETED; exit: 1; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/59/c9d0f3acfae69226fe2e331b45a14f]
+Mar-27 23:09:54.710 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'dada_single (230,229)'
+
+Caused by:
+  Process `dada_single (230,229)` terminated with an error exit status (1)
+
+Command executed:
+
+  export HOME="${PWD}/HOME"
+  IFS=',' read -r -a trunclen <<< "230,229"
+  
+  #denoise samples with DADA2 and produce
+  qiime dada2 denoise-paired  			--i-demultiplexed-seqs demux.qza  			--p-trunc-len-f ${trunclen[0]} 			--p-trunc-len-r ${trunclen[1]} 			--p-max-ee-f 2 			--p-max-ee-r 2 			--p-n-threads 0  			--o-table table.qza  			--o-representative-sequences rep-seqs.qza  			--o-denoising-stats stats.qza 			--verbose 		>dada_report.txt
+  
+  #produce dada2 stats "dada_stats/stats.tsv"
+  qiime tools export --input-path stats.qza 			--output-path dada_stats
+  
+  #produce raw count table in biom format "table/feature-table.biom"
+  qiime tools export --input-path table.qza  			--output-path table
+  
+  #produce raw count table
+  biom convert -i table/feature-table.biom 			-o table/feature-table.tsv  			--to-tsv
+  
+  #produce representative sequence fasta file
+  qiime feature-table tabulate-seqs  			--i-data rep-seqs.qza  			--o-visualization rep-seqs.qzv
+  qiime tools export --input-path rep-seqs.qzv  			--output-path unfiltered
+  
+  #convert to relative abundances
+  qiime feature-table relative-frequency 			--i-table table.qza 			--o-relative-frequency-table relative-table-ASV.qza
+  
+  #export to biom
+  qiime tools export --input-path relative-table-ASV.qza 			--output-path rel-table
+  
+  #convert to tab separated text file
+  biom convert 			-i rel-table/feature-table.biom 			-o table/rel-feature-table.tsv --to-tsv
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  QIIME is caching your current deployment for improved performance. This may take a few moments and should only happen once per deployment.
+  Loading required package: Rcpp
+  Error in names(answer) <- names1 : 
+    'names' attribute [4] must be the same length as the vector [3]
+  Execution halted
+  Traceback (most recent call last):
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/q2_dada2/_denoise.py", line 257, in denoise_paired
+      run_commands([cmd])
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/q2_dada2/_denoise.py", line 36, in run_commands
+      subprocess.run(cmd, check=True)
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/subprocess.py", line 418, in run
+      output=stdout, stderr=stderr)
+  subprocess.CalledProcessError: Command '['run_dada_paired.R', '/tmp/tmpp5wa2973/forward', '/tmp/tmpp5wa2973/reverse', '/tmp/tmpp5wa2973/output.tsv.biom', '/tmp/tmpp5wa2973/track.tsv', '/tmp/tmpp5wa2973/filt_f', '/tmp/tmpp5wa2973/filt_r', '230', '229', '0', '0', '2.0', '2.0', '2', 'consensus', '1.0', '0', '1000000']' returned non-zero exit status 1.
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/q2cli/commands.py", line 328, in __call__
+      results = action(**arguments)
+    File "</opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/decorator.py:decorator-gen-459>", line 2, in denoise_paired
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/qiime2/sdk/action.py", line 240, in bound_callable
+      output_types, provenance)
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/qiime2/sdk/action.py", line 383, in _callable_executor_
+      output_views = self._callable(**view_args)
+    File "/opt/conda/envs/nf-core-ampliseq-1.2.0/lib/python3.6/site-packages/q2_dada2/_denoise.py", line 272, in denoise_paired
+      " and stderr to learn more." % e.returncode)
+  Exception: An error was encountered while running DADA2 in R (return code 1), please inspect stdout and stderr to learn more.
+  
+  Plugin error from dada2:
+  
+    An error was encountered while running DADA2 in R (return code 1), please inspect stdout and stderr to learn more.
+  
+  See above for debug info.
+
+Work dir:
+  /Users/nirvaanreddy/Desktop/CURVE/work/59/c9d0f3acfae69226fe2e331b45a14f
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Mar-27 23:09:54.747 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Mar-27 23:09:54.792 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-27 23:09:54.879 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-27 23:09:55.659 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/ampliseq][0;31m Pipeline completed with errors[0m-
+Mar-27 23:09:55.679 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=16; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 27s; failedDuration=1m 11s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=2; peakMemory=6 GB; ]
+Mar-27 23:09:55.679 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Mar-27 23:09:55.681 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Mar-27 23:09:55.855 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":76.6,"min":76.6,"q1":76.6,"q2":76.6,"q3":76.6,"max":76.6,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"process":"get_software_versions","mem":{"mean":60928000,"min":60928000,"q1":60928000,"q2":60928000,"q3":60928000,"max":60928000,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"memUsage":{"mean":0.95,"min":0.95,"q1":0.95,"q2":0.95,"q3":0.95,"max":0.95,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"vmem":{"mean":241860608,"min":241860608,"q1":241860608,"q2":241860608,"q3":241860608,"max":241860608,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"reads":{"mean":22733592,"min":22733592,"q1":22733592,"q2":22733592,"q3":22733592,"max":22733592,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"cpu":{"mean":76.6,"min":76.6,"q1":76.6,"q2":76.6,"q3":76.6,"max":76.6,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"time":{"mean":3479,"min":3479,"q1":3479,"q2":3479,"q3":3479,"max":3479,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"writes":{"mean":1081,"min":1081,"q1":1081,"q2":1081,"q3":1081,"max":1081,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"}},{"cpuUsage":{"mean":76.5,"min":76.5,"q1":76.5,"q2":76.5,"q3":76.5,"max":76.5,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"process":"output_documentation","mem":{"mean":3207168,"min":3207168,"q1":3207168,"q2":3207168,"q3":3207168,"max":3207168,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"memUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"timeUsage":null,"vmem":{"mean":5636096,"min":5636096,"q1":5636096,"q2":5636096,"q3":5636096,"max":5636096,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"reads":{"mean":3510997,"min":3510997,"q1":3510997,"q2":3510997,"q3":3510997,"max":3510997,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"cpu":{"mean":76.5,"min":76.5,"q1":76.5,"q2":76.5,"q3":76.5,"max":76.5,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"time":{"mean":661,"min":661,"q1":661,"q2":661,"q3":661,"max":661,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"writes":{"mean":22998,"min":22998,"q1":22998,"q2":22998,"q3":22998,"max":22998,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"}},{"cpuUsage":{"mean":185.2,"min":185.2,"q1":185.2,"q2":185.2,"q3":185.2,"max":185.2,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"process":"metadata_category_pairwise","mem":{"mean":3141632,"min":3141632,"q1":3141632,"q2":3141632,"q3":3141632,"max":3141632,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"memUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"timeUsage":null,"vmem":{"mean":5636096,"min":5636096,"q1":5636096,"q2":5636096,"q3":5636096,"max":5636096,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"reads":{"mean":5753620,"min":5753620,"q1":5753620,"q2":5753620,"q3":5753620,"max":5753620,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"cpu":{"mean":185.2,"min":185.2,"q1":185.2,"q2":185.2,"q3":185.2,"max":185.2,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"time":{"mean":533,"min":533,"q1":533,"q2":533,"q3":533,"max":533,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"},"writes":{"mean":483,"min":483,"q1":483,"q2":483,"q3":483,"max":483,"minLabel":"metadata_category_pairwise (1)","maxLabel":"metadata_category_pairwise (1)","q1Label":"metadata_category_pairwise (1)","q2Label":"metadata_category_pairwise (1)","q3Label":"metadata_category_pairwise (1)"}},{"cpuUsage":{"mean":156.7,"min":156.7,"q1":156.7,"q2":156.7,"q3":156.7,"max":156.7,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"process":"metadata_category_all","mem":{"mean":3112960,"min":3112960,"q1":3112960,"q2":3112960,"q3":3112960,"max":3112960,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"memUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"vmem":{"mean":5636096,"min":5636096,"q1":5636096,"q2":5636096,"q3":5636096,"max":5636096,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"reads":{"mean":5753446,"min":5753446,"q1":5753446,"q2":5753446,"q3":5753446,"max":5753446,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"cpu":{"mean":156.7,"min":156.7,"q1":156.7,"q2":156.7,"q3":156.7,"max":156.7,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"time":{"mean":871,"min":871,"q1":871,"q2":871,"q3":871,"max":871,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"},"writes":{"mean":474,"min":474,"q1":474,"q2":474,"q3":474,"max":474,"minLabel":"metadata_category_all (1)","maxLabel":"metadata_category_all (1)","q1Label":"metadata_category_all (1)","q2Label":"metadata_category_all (1)","q3Label":"metadata_category_all (1)"}},{"cpuUsage":{"mean":90.78,"min":81.3,"q1":88.28,"q2":92.05,"q3":94.55,"max":97.7,"minLabel":"trimming (1)","maxLabel":"trimming (1a)","q1Label":"trimming (1)","q2Label":"trimming (2)","q3Label":"trimming (2a)"},"process":"trimming","mem":{"mean":3212288,"min":3178496,"q1":3181568,"q2":3188736,"q3":3219456,"max":3293184,"minLabel":"trimming (1a)","maxLabel":"trimming (1)","q1Label":"trimming (1a)","q2Label":"trimming (2a)","q3Label":"trimming (2)"},"memUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"trimming (1a)","maxLabel":"trimming (1)","q1Label":"trimming (1a)","q2Label":"trimming (2a)","q3Label":"trimming (2)"},"timeUsage":null,"vmem":{"mean":5636096,"min":5636096,"q1":5636096,"q2":5636096,"q3":5636096,"max":5636096,"minLabel":"trimming (1)","maxLabel":"trimming (2a)","q1Label":"trimming (1)","q2Label":"trimming (2)","q3Label":"trimming (1a)"},"reads":{"mean":4851607.25,"min":4417248,"q1":4834813.5,"q2":4980179.5,"q3":4996973.25,"max":5028822,"minLabel":"trimming (1)","maxLabel":"trimming (2)","q1Label":"trimming (1)","q2Label":"trimming (2a)","q3Label":"trimming (1a)"},"cpu":{"mean":90.78,"min":81.3,"q1":88.28,"q2":92.05,"q3":94.55,"max":97.7,"minLabel":"trimming (1)","maxLabel":"trimming (1a)","q1Label":"trimming (1)","q2Label":"trimming (2)","q3Label":"trimming (2a)"},"time":{"mean":623.25,"min":582,"q1":588,"q2":607,"q3":642.25,"max":697,"minLabel":"trimming (2a)","maxLabel":"trimming (1a)","q1Label":"trimming (2a)","q2Label":"trimming (2)","q3Label":"trimming (1)"},"writes":{"mean":3199755.25,"min":2786690,"q1":3176390.75,"q2":3308166,"q3":3331530.5,"max":3395999,"minLabel":"trimming (1)","maxLabel":"trimming (2)","q1Label":"trimming (1)","q2Label":"trimming (2a)","q3Label":"trimming (1a)"}},{"cpuUsage":{"mean":138.25,"min":125.1,"q1":134.48,"q2":138.85,"q3":142.63,"max":150.2,"minLabel":"fastqc (2a)","maxLabel":"fastqc (1a)","q1Label":"fastqc (2a)","q2Label":"fastqc (2)","q3Label":"fastqc (1)"},"process":"fastqc","mem":{"mean":254687232,"min":216633344,"q1":252929024,"q2":266352640,"q3":268110848,"max":269410304,"minLabel":"fastqc (1)","maxLabel":"fastqc (2a)","q1Label":"fastqc (1)","q2Label":"fastqc (1a)","q3Label":"fastqc (2)"},"memUsage":{"mean":3.95,"min":3.36,"q1":3.93,"q2":4.13,"q3":4.16,"max":4.18,"minLabel":"fastqc (1)","maxLabel":"fastqc (2a)","q1Label":"fastqc (1)","q2Label":"fastqc (1a)","q3Label":"fastqc (2)"},"timeUsage":{"mean":0.07,"min":0.06,"q1":0.06,"q2":0.07,"q3":0.07,"max":0.08,"minLabel":"fastqc (2a)","maxLabel":"fastqc (1)","q1Label":"fastqc (2a)","q2Label":"fastqc (1a)","q3Label":"fastqc (2)"},"vmem":{"mean":3254532096,"min":3253649408,"q1":3253649408,"q2":3253649408,"q3":3254532096,"max":3257180160,"minLabel":"fastqc (1a)","maxLabel":"fastqc (2a)","q1Label":"fastqc (1a)","q2Label":"fastqc (1)","q3Label":"fastqc (2)"},"reads":{"mean":18052852.75,"min":18022180,"q1":18027823,"q2":18035017.5,"q3":18060047.25,"max":18119196,"minLabel":"fastqc (2a)","maxLabel":"fastqc (2)","q1Label":"fastqc (2a)","q2Label":"fastqc (1a)","q3Label":"fastqc (1)"},"cpu":{"mean":138.25,"min":125.1,"q1":134.48,"q2":138.85,"q3":142.63,"max":150.2,"minLabel":"fastqc (2a)","maxLabel":"fastqc (1a)","q1Label":"fastqc (2a)","q2Label":"fastqc (2)","q3Label":"fastqc (1)"},"time":{"mean":9875.25,"min":8565,"q1":9294,"q2":9550,"q3":10131.25,"max":11836,"minLabel":"fastqc (2a)","maxLabel":"fastqc (1)","q1Label":"fastqc (2a)","q2Label":"fastqc (1a)","q3Label":"fastqc (2)"},"writes":{"mean":5826397.5,"min":5716462,"q1":5737883.5,"q2":5800845.5,"q3":5889359.5,"max":5987437,"minLabel":"fastqc (1a)","maxLabel":"fastqc (1)","q1Label":"fastqc (1a)","q2Label":"fastqc (2a)","q3Label":"fastqc (2)"}},{"cpuUsage":{"mean":38.3,"min":38.3,"q1":38.3,"q2":38.3,"q3":38.3,"max":38.3,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"process":"multiqc","mem":{"mean":89018368,"min":89018368,"q1":89018368,"q2":89018368,"q3":89018368,"max":89018368,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"memUsage":{"mean":1.38,"min":1.38,"q1":1.38,"q2":1.38,"q3":1.38,"max":1.38,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"timeUsage":{"mean":0.13,"min":0.13,"q1":0.13,"q2":0.13,"q3":0.13,"max":0.13,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"vmem":{"mean":411869184,"min":411869184,"q1":411869184,"q2":411869184,"q3":411869184,"max":411869184,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"reads":{"mean":360477650,"min":360477650,"q1":360477650,"q2":360477650,"q3":360477650,"max":360477650,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"cpu":{"mean":38.3,"min":38.3,"q1":38.3,"q2":38.3,"q3":38.3,"max":38.3,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"time":{"mean":18534,"min":18534,"q1":18534,"q2":18534,"q3":18534,"max":18534,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"},"writes":{"mean":3460139,"min":3460139,"q1":3460139,"q2":3460139,"q3":3460139,"max":3460139,"minLabel":"multiqc (1)","maxLabel":"multiqc (1)","q1Label":"multiqc (1)","q2Label":"multiqc (1)","q3Label":"multiqc (1)"}},{"cpuUsage":{"mean":83.2,"min":83.2,"q1":83.2,"q2":83.2,"q3":83.2,"max":83.2,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"process":"qiime_import","mem":{"mean":225247232,"min":225247232,"q1":225247232,"q2":225247232,"q3":225247232,"max":225247232,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"memUsage":{"mean":3.5,"min":3.5,"q1":3.5,"q2":3.5,"q3":3.5,"max":3.5,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"timeUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"vmem":{"mean":504139776,"min":504139776,"q1":504139776,"q2":504139776,"q3":504139776,"max":504139776,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"reads":{"mean":50267424,"min":50267424,"q1":50267424,"q2":50267424,"q3":50267424,"max":50267424,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"cpu":{"mean":83.2,"min":83.2,"q1":83.2,"q2":83.2,"q3":83.2,"max":83.2,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"time":{"mean":6919,"min":6919,"q1":6919,"q2":6919,"q3":6919,"max":6919,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"},"writes":{"mean":4281370,"min":4281370,"q1":4281370,"q2":4281370,"q3":4281370,"max":4281370,"minLabel":"qiime_import (1)","maxLabel":"qiime_import (1)","q1Label":"qiime_import (1)","q2Label":"qiime_import (1)","q3Label":"qiime_import (1)"}},{"cpuUsage":{"mean":98.3,"min":98.3,"q1":98.3,"q2":98.3,"q3":98.3,"max":98.3,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"process":"qiime_demux_visualize","mem":{"mean":348196864,"min":348196864,"q1":348196864,"q2":348196864,"q3":348196864,"max":348196864,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"memUsage":{"mean":5.4,"min":5.4,"q1":5.4,"q2":5.4,"q3":5.4,"max":5.4,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"timeUsage":{"mean":0.08,"min":0.08,"q1":0.08,"q2":0.08,"q3":0.08,"max":0.08,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"vmem":{"mean":627060736,"min":627060736,"q1":627060736,"q2":627060736,"q3":627060736,"max":627060736,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"reads":{"mean":75636910,"min":75636910,"q1":75636910,"q2":75636910,"q3":75636910,"max":75636910,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"cpu":{"mean":98.3,"min":98.3,"q1":98.3,"q2":98.3,"q3":98.3,"max":98.3,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"time":{"mean":12001,"min":12001,"q1":12001,"q2":12001,"q3":12001,"max":12001,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"},"writes":{"mean":6686495,"min":6686495,"q1":6686495,"q2":6686495,"q3":6686495,"max":6686495,"minLabel":"qiime_demux_visualize (demux)","maxLabel":"qiime_demux_visualize (demux)","q1Label":"qiime_demux_visualize (demux)","q2Label":"qiime_demux_visualize (demux)","q3Label":"qiime_demux_visualize (demux)"}},{"cpuUsage":{"mean":88.5,"min":88.5,"q1":88.5,"q2":88.5,"q3":88.5,"max":88.5,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"process":"dada_trunc_parameter","mem":{"mean":68263936,"min":68263936,"q1":68263936,"q2":68263936,"q3":68263936,"max":68263936,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"memUsage":{"mean":1.06,"min":1.06,"q1":1.06,"q2":1.06,"q3":1.06,"max":1.06,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"vmem":{"mean":391835648,"min":391835648,"q1":391835648,"q2":391835648,"q3":391835648,"max":391835648,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"reads":{"mean":14991190,"min":14991190,"q1":14991190,"q2":14991190,"q3":14991190,"max":14991190,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"cpu":{"mean":88.5,"min":88.5,"q1":88.5,"q2":88.5,"q3":88.5,"max":88.5,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"time":{"mean":1624,"min":1624,"q1":1624,"q2":1624,"q3":1624,"max":1624,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"},"writes":{"mean":24747,"min":24747,"q1":24747,"q2":24747,"q3":24747,"max":24747,"minLabel":"dada_trunc_parameter (1)","maxLabel":"dada_trunc_parameter (1)","q1Label":"dada_trunc_parameter (1)","q2Label":"dada_trunc_parameter (1)","q3Label":"dada_trunc_parameter (1)"}},{"cpuUsage":null,"process":"dada_single","mem":null,"memUsage":null,"timeUsage":{"mean":0.05,"min":0.05,"q1":0.05,"q2":0.05,"q3":0.05,"max":0.05,"minLabel":"dada_single (230,229)","maxLabel":"dada_single (230,229)","q1Label":"dada_single (230,229)","q2Label":"dada_single (230,229)","q3Label":"dada_single (230,229)"},"vmem":null,"reads":null,"cpu":null,"time":{"mean":35379,"min":35379,"q1":35379,"q2":35379,"q3":35379,"max":35379,"minLabel":"dada_single (230,229)","maxLabel":"dada_single (230,229)","q1Label":"dada_single (230,229)","q2Label":"dada_single (230,229)","q3Label":"dada_single (230,229)"},"writes":null}]
+Mar-27 23:09:56.805 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Mar-27 23:09:56.923 [main] WARN  nextflow.dag.GraphvizRenderer - To render the execution DAG in the required format it is required to install Graphviz -- See http://www.graphviz.org for more info.
+Mar-27 23:09:57.010 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-27 23:09:57.043 [main] DEBUG nextflow.util.SpuriousDeps - AWS S3 uploader shutdown
+Mar-27 23:09:57.243 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

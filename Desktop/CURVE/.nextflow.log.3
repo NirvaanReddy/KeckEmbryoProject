@@ -1,0 +1,178 @@
+Mar-29 19:44:58.122 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/hic -r 1.2.2 -profile test, docker
+Mar-29 19:44:58.311 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Mar-29 19:44:58.376 [main] INFO  nextflow.cli.CmdRun - Pulling nf-core/hic ...
+Mar-29 19:44:58.377 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/hic/contents/nextflow.config
+Mar-29 19:45:00.102 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/hic/contents/main.nf
+Mar-29 19:45:00.358 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/hic
+Mar-29 19:45:00.554 [main] DEBUG nextflow.scm.AssetManager - Pulling nf-core/hic -- Using remote clone url: https://github.com/nf-core/hic.git
+Mar-29 19:45:02.950 [main] INFO  nextflow.cli.CmdRun -  downloaded from https://github.com/nf-core/hic.git
+Mar-29 19:45:03.056 [main] INFO  nextflow.cli.CmdRun - Launching `nf-core/hic` [agitated_bhabha] - revision: 52e5f048a6 [1.2.2]
+Mar-29 19:45:03.149 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/nirvaanreddy/.nextflow/assets/nf-core/hic/nextflow.config
+Mar-29 19:45:03.150 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/nirvaanreddy/.nextflow/assets/nf-core/hic/nextflow.config
+Mar-29 19:45:03.159 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,`
+Mar-29 19:45:03.923 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, bi, genotoul, bigpurple, uppmax, abims, imperial_mb, oist, docker, gis, utd_ganymede, mpcdf, conda, singularity, icr_davros, munin, prince, czbiohub_aws, hebbe, jax, cfc, uzh, ccga_med, debug, test, genouest, cbe, ebc, ccga_dx, crick, google, kraken, phoenix, seg_globe, shh, awsbatch, pasteur, uct_hpc, imperial, binac, eddie]
+Mar-29 19:45:03.991 [main] DEBUG nextflow.Session - Session uuid: 5e2b2597-d740-4a90-b3a3-274820d0c20e
+Mar-29 19:45:03.992 [main] DEBUG nextflow.Session - Run name: agitated_bhabha
+Mar-29 19:45:03.992 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-29 19:45:04.249 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC (08:14 MDT)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.5 on Java HotSpot(TM) 64-Bit Server VM 14.0.2+12-46
+  Encoding: UTF-8 (UTF-8)
+  Process: 12082@Nirvaans-MacBook-Pro.local [127.0.0.1]
+  CPUs: 8 - Mem: 8 GB (151.5 MB) - Swap: 7 GB (295.5 MB)
+Mar-29 19:45:04.264 [main] DEBUG nextflow.Session - Work-dir: /Users/nirvaanreddy/Desktop/CURVE/work [Mac OS X]
+Mar-29 19:45:04.328 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Mar-29 19:45:04.331 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-29 19:45:04.537 [main] DEBUG nextflow.Session - Session start invoked
+Mar-29 19:45:04.543 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/nirvaanreddy/Desktop/CURVE/results/pipeline_info/execution_trace.txt
+Mar-29 19:45:06.732 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-29 19:45:06.744 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: getRestrictionFragments, output_documentation, remove_duplicates, bowtie2_on_trimmed_reads, build_contact_maps, makeBowtie2Index, combine_mapped_files, trim_reads, merge_sample, makeChromSize, get_software_versions, bowtie2_end_to_end, dnase_mapping_stats, merge_mapping_steps, get_valid_interaction, get_valid_interaction_dnase, multiqc, generate_cool, run_ice
+Mar-29 19:45:06.916 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/hic v1.2.2[0m
+-[2m--------------------------------------------------[0m-
+
+Mar-29 19:45:06.923 [main] INFO  nextflow.Nextflow - Pipeline Release  : 1.2.2
+Run Name          : agitated_bhabha
+Input             : data/*{1,2}.fastq.gz
+splitFastq        : false
+Fasta Ref         : https://github.com/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa
+Restriction Motif : A^AGCTT
+Ligation Motif    : AAGCTAGCTT
+DNase Mode        : false
+Remove Dup        : true
+Remove MultiHits  : true
+Min MAPQ          : 2
+Min Fragment Size : 100
+Max Fragment Size : 100000
+Min Insert Size   : 100
+Max Insert Size   : 600
+Min CIS dist      : 0
+Maps resolution   : 1000000,500000
+Max Memory        : 4 GB
+Max CPUs          : 2
+Max Time          : 1h
+Output dir        : ./results
+Working dir       : /Users/nirvaanreddy/Desktop/CURVE/work
+Container Engine  : null
+Current home      : /Users/nirvaanreddy
+Current user      : nirvaanreddy
+Current path      : /Users/nirvaanreddy/Desktop/CURVE
+Script dir        : /Users/nirvaanreddy/.nextflow/assets/nf-core/hic
+Config Profile    : test,
+Config Profile Description: Minimal test dataset to check pipeline function
+Config Files      : /Users/nirvaanreddy/.nextflow/assets/nf-core/hic/nextflow.config
+Mar-29 19:45:06.924 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+Mar-29 19:45:07.019 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:get_software_versions` matches process get_software_versions
+Mar-29 19:45:07.021 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.022 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.026 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-29 19:45:07.032 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-29 19:45:07.107 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_highmem` matches label `process_highmem` for process with name makeBowtie2Index
+Mar-29 19:45:07.108 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.108 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.113 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name makeChromSize
+Mar-29 19:45:07.114 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.114 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.122 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name getRestrictionFragments
+Mar-29 19:45:07.122 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.122 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.155 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches label `process_medium` for process with name bowtie2_end_to_end
+Mar-29 19:45:07.156 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.156 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.167 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name trim_reads
+Mar-29 19:45:07.168 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.168 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.172 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches label `process_medium` for process with name bowtie2_on_trimmed_reads
+Mar-29 19:45:07.173 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.173 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches label `process_medium` for process with name merge_mapping_steps
+Mar-29 19:45:07.186 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.186 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.198 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name combine_mapped_files
+Mar-29 19:45:07.199 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.199 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.205 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name get_valid_interaction
+Mar-29 19:45:07.206 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.206 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.214 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_highmem` matches label `process_highmem` for process with name remove_duplicates
+Mar-29 19:45:07.215 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.215 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.222 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name merge_sample
+Mar-29 19:45:07.223 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.223 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.233 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Task runtime metrics are not reported when using macOS without a container engine
+Mar-29 19:45:07.237 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_highmem` matches label `process_highmem` for process with name build_contact_maps
+Mar-29 19:45:07.266 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.266 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.271 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_highmem` matches label `process_highmem` for process with name run_ice
+Mar-29 19:45:07.272 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.272 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.275 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-29 19:45:07.278 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches label `process_medium` for process with name generate_cool
+Mar-29 19:45:07.278 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.278 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.279 [Task submitter] INFO  nextflow.Session - [d4/43753c] Submitted process > get_software_versions
+Mar-29 19:45:07.287 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name multiqc
+Mar-29 19:45:07.288 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.288 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.298 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-29 19:45:07.298 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-29 19:45:07.302 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-29 19:45:07.302 [main] DEBUG nextflow.Session - Session await
+Mar-29 19:45:07.324 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-29 19:45:07.325 [Task submitter] INFO  nextflow.Session - [0e/e8b1c0] Submitted process > output_documentation
+Mar-29 19:45:07.404 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: get_software_versions; status: COMPLETED; exit: 127; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/d4/43753c15e58d974371151ec36fe80b]
+Mar-29 19:45:07.433 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'get_software_versions'
+
+Caused by:
+  Process `get_software_versions` terminated with an error exit status (127)
+
+Command executed:
+
+  echo 1.2.2 > v_pipeline.txt
+  echo 20.10.0 > v_nextflow.txt
+  bowtie2 --version > v_bowtie2.txt
+  python --version > v_python.txt 2>&1
+  samtools --version > v_samtools.txt
+  multiqc --version > v_multiqc.txt
+  scrape_software_versions.py &> software_versions_mqc.yaml
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 4: bowtie2: command not found
+
+Work dir:
+  /Users/nirvaanreddy/Desktop/CURVE/work/d4/43753c15e58d974371151ec36fe80b
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Mar-29 19:45:07.449 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Mar-29 19:45:07.456 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-29 19:45:08.235 [Actor Thread 7] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=24; maxQueueSize=72; keepAlive=1m
+Mar-29 19:45:08.237 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: output_documentation; status: COMPLETED; exit: 1; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/0e/e8b1c06d00aa380c93e2b75d4ef6d1]
+Mar-29 19:45:08.240 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-29 19:45:08.240 [FileTransfer-thread-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa to work dir: /Users/nirvaanreddy/Desktop/CURVE/work/stage/5d/2e3db4fd62636fb4be0f4fce7b27c8/W303_SGD_2015_JRIU00000000.fsa
+Mar-29 19:45:10.244 [Actor Thread 9] INFO  nextflow.file.FilePorter - Staging foreign file: https://github.com/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa
+Mar-29 19:45:21.372 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Mar-29 19:45:21.554 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/hic][0;31m Pipeline completed with errors[0m-
+Mar-29 19:45:21.560 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=2; ignoredCount=0; cachedCount=0; pendingCount=3; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=927ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=8 GB; ]
+Mar-29 19:45:21.560 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Mar-29 19:45:21.562 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Mar-29 19:45:21.592 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":null,"process":"get_software_versions","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":50,"min":50,"q1":50,"q2":50,"q3":50,"max":50,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"writes":null},{"cpuUsage":null,"process":"output_documentation","mem":null,"memUsage":null,"timeUsage":{"mean":0.02,"min":0.02,"q1":0.02,"q2":0.02,"q3":0.02,"max":0.02,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"vmem":null,"reads":null,"cpu":null,"time":{"mean":877,"min":877,"q1":877,"q2":877,"q3":877,"max":877,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"writes":null}]
+Mar-29 19:45:22.345 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Mar-29 19:45:22.387 [main] WARN  nextflow.dag.GraphvizRenderer - To render the execution DAG in the required format it is required to install Graphviz -- See http://www.graphviz.org for more info.
+Mar-29 19:45:22.394 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-29 19:45:22.401 [main] DEBUG nextflow.util.SpuriousDeps - AWS S3 uploader shutdown
+Mar-29 19:45:22.432 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

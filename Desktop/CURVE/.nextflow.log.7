@@ -1,0 +1,247 @@
+Mar-27 23:15:15.122 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/cageseq -r 1.0.2 -profile test
+Mar-27 23:15:15.243 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Mar-27 23:15:16.080 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/cageseq.git
+Mar-27 23:15:16.093 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/cageseq.git
+Mar-27 23:15:16.423 [main] INFO  nextflow.cli.CmdRun - Launching `nf-core/cageseq` [focused_allen] - revision: 838d2a5165 [1.0.2]
+Mar-27 23:15:17.026 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/nextflow.config
+Mar-27 23:15:17.027 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/nextflow.config
+Mar-27 23:15:17.034 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test`
+Mar-27 23:15:17.729 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, bi, genotoul, bigpurple, uppmax, abims, imperial_mb, oist, docker, gis, utd_ganymede, mpcdf, conda, singularity, icr_davros, munin, prince, podman, czbiohub_aws, hebbe, jax, cfc, uzh, ccga_med, debug, test, genouest, cbe, ebc, ccga_dx, crick, google, kraken, phoenix, seg_globe, shh, awsbatch, pasteur, uct_hpc, imperial, test_full, binac, eddie]
+Mar-27 23:15:17.803 [main] DEBUG nextflow.Session - Session uuid: d46fdc37-4340-48c9-bf34-3b0389bf969b
+Mar-27 23:15:17.803 [main] DEBUG nextflow.Session - Run name: focused_allen
+Mar-27 23:15:17.804 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-27 23:15:17.843 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC (08:14 MDT)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.5 on Java HotSpot(TM) 64-Bit Server VM 14.0.2+12-46
+  Encoding: UTF-8 (UTF-8)
+  Process: 99078@Nirvaans-MacBook-Pro.local [127.0.0.1]
+  CPUs: 8 - Mem: 8 GB (200.5 MB) - Swap: 6 GB (373.8 MB)
+Mar-27 23:15:17.856 [main] DEBUG nextflow.Session - Work-dir: /Users/nirvaanreddy/Desktop/CURVE/work [Mac OS X]
+Mar-27 23:15:17.924 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Mar-27 23:15:17.926 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-27 23:15:18.092 [main] DEBUG nextflow.Session - Session start invoked
+Mar-27 23:15:18.096 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/nirvaanreddy/Desktop/CURVE/results/pipeline_info/execution_trace.txt
+Mar-27 23:15:20.105 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-27 23:15:20.116 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: make_STAR_index, generate_count_matrix, star, output_documentation, convert_gtf, ctss_qc, sortmerna, bowtie, make_bowtie_index, generate_counts, make_bigwig, trim_artifacts, get_ctss, get_chrom_sizes, fastqc, trimmed_fastqc, trim_5g, cluster_ctss, get_software_versions, trim_adapters, multiqc, samtools_stats
+Mar-27 23:15:20.244 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/cageseq v1.0.2[0m
+-[2m--------------------------------------------------[0m-
+
+Mar-27 23:15:20.247 [main] INFO  nextflow.Nextflow - Pipeline Release  : 1.0.2
+Run Name          : focused_allen
+Input             : data/*R1.fastq.gz
+5' artifacts      : /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/assets/artifacts_5end.fasta
+3' artifacts      : /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/assets/artifacts_3end.fasta
+trim_ecop         : true
+trim_linker       : true
+trim_5g           : true
+trim_artifacts    : false
+eco_site          : CAGCAG
+linker_seq        : TCGTATGCCGTCTTC
+Remove rRNA       : false
+Aligner           : STAR
+Fasta Ref         : https://github.com/nf-core/test-datasets/raw/cageseq/reference/chr_sub.fasta
+Min. cluster      : 30
+Cluster Threshold : 0.2
+Save Reference    : false
+Max Resources     : 6 GB memory, 2 cpus, 2d time per job
+Output dir        : ./results
+Launch dir        : /Users/nirvaanreddy/Desktop/CURVE
+Working dir       : /Users/nirvaanreddy/Desktop/CURVE/work
+Script dir        : /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq
+User              : nirvaanreddy
+Config Profile    : test
+Config Profile Description: Minimal test dataset to check pipeline function
+Config Files      : /Users/nirvaanreddy/.nextflow/assets/nf-core/cageseq/nextflow.config
+Mar-27 23:15:20.248 [main] INFO  nextflow.Nextflow - -[2m--------------------------------------------------[0m-
+Mar-27 23:15:20.294 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:get_software_versions` matches process get_software_versions
+Mar-27 23:15:20.297 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.297 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.302 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-27 23:15:20.307 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-27 23:15:20.372 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.372 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.382 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.383 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.395 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name fastqc
+Mar-27 23:15:20.395 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.395 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.403 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches label `process_high` for process with name make_STAR_index
+Mar-27 23:15:20.404 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.404 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.434 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.434 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.441 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.441 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.451 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.451 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.460 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches label `process_high` for process with name star
+Mar-27 23:15:20.460 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.460 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.465 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches label `process_low` for process with name samtools_stats
+Mar-27 23:15:20.466 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.466 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.469 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.469 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.475 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches label `process_high` for process with name cluster_ctss
+Mar-27 23:15:20.476 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.476 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.480 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.480 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.487 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.487 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.492 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.492 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.499 [Task submitter] WARN  nextflow.executor.BashWrapperBuilder - Task runtime metrics are not reported when using macOS without a container engine
+Mar-27 23:15:20.506 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:15:20.510 [Task submitter] INFO  nextflow.Session - [c8/aa64de] Submitted process > get_software_versions
+Mar-27 23:15:20.519 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.519 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.530 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-27 23:15:20.530 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-27 23:15:20.537 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-27 23:15:20.538 [main] DEBUG nextflow.Session - Session await
+Mar-27 23:15:20.561 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-27 23:15:20.562 [Task submitter] INFO  nextflow.Session - [67/d1e55b] Submitted process > output_documentation
+Mar-27 23:15:20.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: get_software_versions; status: COMPLETED; exit: 127; error: -; workDir: /Users/nirvaanreddy/Desktop/CURVE/work/c8/aa64deb724dba338dbfbda2c6c0f55]
+Mar-27 23:15:20.616 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'get_software_versions'
+
+Caused by:
+  Process `get_software_versions` terminated with an error exit status (127)
+
+Command executed:
+
+  echo 1.0.2 > v_pipeline.txt
+  echo 20.10.0 > v_nextflow.txt
+  fastqc --version > v_fastqc.txt
+  multiqc --version > v_multiqc.txt
+  STAR --version > v_star.txt
+  bowtie --version > v_bowtie.txt
+  cutadapt --version > v_cutadapt.txt
+  samtools --version > v_samtools.txt
+  bedtools --version > v_bedtools.txt
+  read_distribution.py --version > v_rseqc.txt
+  sortmerna --version > v_sortmerna.txt
+  scrape_software_versions.py &> software_versions_mqc.yaml
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 4: fastqc: command not found
+
+Work dir:
+  /Users/nirvaanreddy/Desktop/CURVE/work/c8/aa64deb724dba338dbfbda2c6c0f55
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Mar-27 23:15:20.637 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `get_software_versions` terminated with an error exit status (127)
+Mar-27 23:15:20.657 [Actor Thread 3] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.023 s; total time: 0.024 s
+Mar-27 23:15:20.663 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/ac8508141227ba2454adfa3e9cc11959.collect-file
+Mar-27 23:15:20.672 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] convert_gtf
+  status=ACTIVE
+  port 0: (queue) closed; channel: gtf
+  port 1: (cntrl) -     ; channel: $
+
+[process] get_chrom_sizes
+  status=ACTIVE
+  port 0: (value) bound ; channel: fasta
+  port 1: (cntrl) -     ; channel: $
+
+[process] fastqc
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] make_STAR_index
+  status=ACTIVE
+  port 0: (queue) closed; channel: fasta
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] trim_adapters
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] trim_5g
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] trimmed_fastqc
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] star
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: index
+  port 2: (value) bound ; channel: gtf
+  port 3: (cntrl) -     ; channel: $
+
+[process] samtools_stats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] get_ctss
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cluster_ctss
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: ctss
+  port 1: (cntrl) -     ; channel: $
+
+[process] generate_counts
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: clusters
+  port 2: (cntrl) -     ; channel: $
+
+[process] generate_count_matrix
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: counts
+  port 1: (value) OPEN  ; channel: clusters
+  port 2: (cntrl) -     ; channel: $
+
+[process] ctss_qc
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: clusters
+  port 1: (value) OPEN  ; channel: gtf
+  port 2: (value) OPEN  ; channel: chrom_sizes
+  port 3: (cntrl) -     ; channel: $
+
+Mar-27 23:15:20.674 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /var/folders/8q/mbdq65fs4ys4r_794cc6j6wh0000gn/T/nxf-1078379969206180567
+Mar-27 23:15:20.674 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-27 23:15:20.674 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-27 23:15:20.849 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/cageseq][0;31m Pipeline completed with errors[0m-
+Mar-27 23:15:20.852 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (1)
+Mar-27 23:15:20.863 [main] DEBUG nextflow.executor.LocalTaskHandler - Unable to kill output_documentation -- command: kill -TERM 99136; exit: 1 
+ bash: line 0: kill: (99136) - No such process
+
+Mar-27 23:15:20.865 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=0ms; failedDuration=55ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
+Mar-27 23:15:20.865 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Mar-27 23:15:20.867 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Mar-27 23:15:20.896 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":null,"process":"get_software_versions","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":55,"min":55,"q1":55,"q2":55,"q3":55,"max":55,"minLabel":"get_software_versions","maxLabel":"get_software_versions","q1Label":"get_software_versions","q2Label":"get_software_versions","q3Label":"get_software_versions"},"writes":null},{"cpuUsage":null,"process":"output_documentation","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Mar-27 23:15:21.445 [Actor Thread 6] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=24; maxQueueSize=72; keepAlive=1m
+Mar-27 23:15:21.450 [FileTransfer-thread-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/cageseq/testdata/cage2.fastq.gz to work dir: /Users/nirvaanreddy/Desktop/CURVE/work/stage/c8/e8ccb31e5adcb1a91fda1db2c3a40d/cage2.fastq.gz
+Mar-27 23:15:21.551 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Mar-27 23:15:21.588 [main] WARN  nextflow.dag.GraphvizRenderer - To render the execution DAG in the required format it is required to install Graphviz -- See http://www.graphviz.org for more info.
+Mar-27 23:15:21.591 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-27 23:15:21.600 [main] DEBUG nextflow.util.SpuriousDeps - AWS S3 uploader shutdown
+Mar-27 23:15:21.632 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

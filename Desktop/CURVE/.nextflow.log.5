@@ -1,0 +1,112 @@
+Mar-27 23:16:56.214 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/rnaseq -r 3.0 -profile test, docker
+Mar-27 23:16:56.344 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Mar-27 23:16:57.573 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnaseq.git
+Mar-27 23:16:57.586 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnaseq.git
+Mar-27 23:16:57.990 [main] INFO  nextflow.cli.CmdRun - Launching `nf-core/rnaseq` [angry_newton] - revision: 3643a94411 [3.0]
+Mar-27 23:16:58.864 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/nextflow.config
+Mar-27 23:16:58.864 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/nextflow.config
+Mar-27 23:16:58.870 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,`
+Mar-27 23:16:59.697 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, bi, genotoul, bigpurple, uppmax, abims, imperial_mb, oist, docker, gis, utd_ganymede, mpcdf, conda, singularity, icr_davros, munin, prince, podman, test_sra, czbiohub_aws, hebbe, jax, cfc, uzh, ccga_med, debug, test, genouest, cbe, ebc, ccga_dx, crick, google, kraken, phoenix, seg_globe, shh, awsbatch, pasteur, uct_hpc, imperial, test_full, binac, eddie]
+Mar-27 23:16:59.760 [main] DEBUG nextflow.Session - Session uuid: 3d58c6a5-cfa6-4a5b-89c1-709390695865
+Mar-27 23:16:59.760 [main] DEBUG nextflow.Session - Run name: angry_newton
+Mar-27 23:16:59.761 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-27 23:17:00.038 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC (08:14 MDT)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.5 on Java HotSpot(TM) 64-Bit Server VM 14.0.2+12-46
+  Encoding: UTF-8 (UTF-8)
+  Process: 99263@Nirvaans-MacBook-Pro.local [10.0.1.200]
+  CPUs: 8 - Mem: 8 GB (23.6 MB) - Swap: 6 GB (779.2 MB)
+Mar-27 23:17:00.054 [main] DEBUG nextflow.Session - Work-dir: /Users/nirvaanreddy/Desktop/CURVE/work [Mac OS X]
+Mar-27 23:17:00.108 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Mar-27 23:17:00.111 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-27 23:17:00.311 [main] DEBUG nextflow.Session - Session start invoked
+Mar-27 23:17:00.315 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/nirvaanreddy/Desktop/CURVE/results/pipeline_info/execution_trace.txt
+Mar-27 23:17:00.332 [main] DEBUG nextflow.Session - Using default localLib path: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/lib
+Mar-27 23:17:00.336 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/lib
+Mar-27 23:17:01.029 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-27 23:17:01.098 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/rnaseq v3.0[0m
+-[2m----------------------------------------------------[0m-
+
+Core Nextflow options
+    [1mrevision                  : [1m3.0
+    [1mrunName                   : [1mangry_newton
+    [1mlaunchDir                 : [1m/Users/nirvaanreddy/Desktop/CURVE
+    [1mworkDir                   : [1m/Users/nirvaanreddy/Desktop/CURVE/work
+    [1mprojectDir                : [1m/Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq
+    [1muserName                  : [1mnirvaanreddy
+    [1mprofile                   : [1mtest,
+    [1mconfigFiles               : [1m/Users/nirvaanreddy/.nextflow/assets/nf-core/rnaseq/nextflow.config
+
+Input/output options
+    [1minput                     : [1mhttps://raw.githubusercontent.com/nf-core/test-datasets/rnaseq/samplesheet/samplesheet.csv
+
+UMI options
+    [1mumitools_bc_pattern       : [1mNNNN
+
+Reference genome options
+    [1mfasta                     : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/genome.fa
+    [1mgtf                       : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/genes.gtf.gz
+    [1mgff                       : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/genes.gff.gz
+    [1mtranscript_fasta          : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/transcriptome.fasta
+    [1madditional_fasta          : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/gfp.fa.gz
+    [1mstar_index                : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/star.tar.gz
+    [1mhisat2_index              : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/hisat2.tar.gz
+    [1mrsem_index                : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/rsem.tar.gz
+    [1msalmon_index              : [1mhttps://github.com/nf-core/test-datasets/raw/rnaseq/reference/salmon.tar.gz
+
+Alignment options
+    [1mpseudo_aligner            : [1msalmon
+
+Institutional config options
+    [1mconfig_profile_description: [1mMinimal test dataset to check pipeline function
+
+Max job request options
+    [1mmax_cpus                  : [1m2
+    [1mmax_memory                : [1m6 GB
+    [1mmax_time                  : [1m2d
+
+-[2m----------------------------------------------------[0m-
+
+If you use nf-core/rnaseq for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.1400710
+
+* The nf-core framework
+  https://dx.doi.org/10.1038/s41587-020-0439-x
+  https://rdcu.be/b1GjZ
+
+* Software dependencies
+  https://github.com/nf-core/rnaseq/blob/master/CITATIONS.md
+
+-[2m----------------------------------------------------[0m-
+Mar-27 23:17:01.138 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: 
+Mar-27 23:17:01.141 [main] DEBUG nextflow.Session - Session aborted -- Cause: Nextflow version 20.10.0 does not match workflow required version: >=20.11.0-edge
+Mar-27 23:17:01.156 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Nextflow version 20.10.0 does not match workflow required version: >=20.11.0-edge
+	at nextflow.Session.showVersionError(Session.groovy:805)
+	at nextflow.Session.checkVersion(Session.groovy:800)
+	at nextflow.Session.validate(Session.groovy:772)
+	at nextflow.Session.notifyBeforeWorkflowExecution(Session.groovy:990)
+	at nextflow.Session$notifyBeforeWorkflowExecution$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:190)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:219)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:219)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:127)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:277)
+	at nextflow.cli.Launcher.run(Launcher.groovy:466)
+	at nextflow.cli.Launcher.main(Launcher.groovy:648)

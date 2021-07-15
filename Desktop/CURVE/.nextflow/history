@@ -1,0 +1,16 @@
+2021-03-16 22:38:02	18m 27s	agitated_euclid	OK	7ccfb36509d8380946c048065129b29d69c8443b	9d1707e1-5663-4d04-b1dd-de979701b7c6	nextflow run nf-core/sarek -profile test,docker
+2021-03-16 23:22:26	13.9s	pedantic_cuvier	ERR	7ccfb36509d8380946c048065129b29d69c8443b	e31ebff4-b591-4f59-8968-7fce86e788f5	nextflow run nf-core/sarek -r 2.7 -profile test
+2021-03-16 23:23:22	19.8s	clever_carson	ERR	7ccfb36509d8380946c048065129b29d69c8443b	b96ea379-9246-4dc2-84ac-b183626e8d6b	nextflow run nf-core/sarek -r 2.7 -profile test, docker
+2021-03-27 22:50:08	2m 34s	pedantic_goldstine	ERR	1e76f1c0c6d270572573a6ad76aa40bfc185c3da	01dbb43d-db3a-479c-9ed4-b0198fda81b1	nextflow run nf-core/ampliseq -r 1.2.0 -profile test
+2021-03-27 22:55:09	50.6s	extravagant_babbage	ERR	7ccfb36509d8380946c048065129b29d69c8443b	79da3bcd-009c-46ec-a7b4-e88130939b4a	nextflow run nf-core/sarek -r 2.7 -profile test,docker
+2021-03-27 22:56:18	6m 57s	boring_swartz	ERR	1e76f1c0c6d270572573a6ad76aa40bfc185c3da	78ae6374-c90b-4f37-994e-f5b88249cfe3	nextflow run nf-core/ampliseq -r 1.2.0 -profile test,docker
+2021-03-27 23:07:31	2m 26s	marvelous_mirzakhani	ERR	1e76f1c0c6d270572573a6ad76aa40bfc185c3da	4e850a6e-494e-426d-9d34-cfab987182d9	nextflow run nf-core/ampliseq -r 1.2.0 -profile test,docker
+2021-03-27 23:15:00	3.9s	suspicious_jones	ERR	838d2a5165edb86439d7ff0400bd385d6bcf6927	221c2207-08c6-49cf-9838-7515ae9afe78	nextflow run nf-core/cageseq -r 1.0.2 -profile test, docker
+2021-03-27 23:15:17	4.6s	focused_allen	ERR	838d2a5165edb86439d7ff0400bd385d6bcf6927	d46fdc37-4340-48c9-bf34-3b0389bf969b	nextflow run nf-core/cageseq -r 1.0.2 -profile test
+2021-03-27 23:16:23	-	sleepy_galileo	-	3643a94411b65f42bce5357c5015603099556ad9	8b93d9a6-4753-4730-9e3f-5edb0166d909	nextflow run nf-core/rnaseq -r 3.0 -profile test
+2021-03-27 23:17:00	-	angry_newton	-	3643a94411b65f42bce5357c5015603099556ad9	3d58c6a5-cfa6-4a5b-89c1-709390695865	nextflow run nf-core/rnaseq -r 3.0 -profile test, docker
+2021-03-27 23:34:45	8m 19s	zen_brattain	OK	b3e5e3b95aaf01d98391a62a10a3990c0a4de395	9561420a-02c8-4edf-b0c7-bd1b29996c47	nextflow run nf-core/methylseq -r 1.6 -profile test,docker
+2021-03-29 19:45:04	18.4s	agitated_bhabha	ERR	52e5f048a66541a4d33d4b721ff4a0a05ba1745e	5e2b2597-d740-4a90-b3a3-274820d0c20e	nextflow run nf-core/hic -r 1.2.2 -profile test, docker
+2021-03-29 19:45:30	6.1s	sick_pasteur	ERR	52e5f048a66541a4d33d4b721ff4a0a05ba1745e	30a7c33f-efd6-4dd9-ac29-ff2cf1eb1bb4	nextflow run nf-core/hic -r 1.2.2 -profile test
+2021-03-29 19:50:19	7m 48s	adoring_roentgen	OK	69987947952ec3f188356a3043cce724d72125e3	8140f636-a0a0-43b8-ac1b-fbfe8ec54a0a	nextflow run nf-core/hlatyping -r 1.2.0 -profile test,docker
+2021-03-29 20:06:04	11m 39s	sick_hamilton	OK	2b5486356c4dbd4dcb598b611281997119c2e350	cf36bc44-a0e7-45ac-acb8-053573736e44	nextflow run nf-core/deepvariant -r 1.0 -profile test,docker
